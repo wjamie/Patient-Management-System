@@ -29,7 +29,7 @@ public class PatientGUI extends javax.swing.JFrame {
 
         btnViewAppointments = new javax.swing.JButton();
         btnViewPrescriptions = new javax.swing.JButton();
-        btnAppointmentRequest = new javax.swing.JButton();
+        btnRequestAppointment = new javax.swing.JButton();
         btnRequestAccountTermination = new javax.swing.JButton();
         btnGiveDoctorFeedback = new javax.swing.JButton();
         btnViewHistory = new javax.swing.JButton();
@@ -54,10 +54,10 @@ public class PatientGUI extends javax.swing.JFrame {
             }
         });
 
-        btnAppointmentRequest.setText("Appointment Request");
-        btnAppointmentRequest.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestAppointment.setText("Request Appointment");
+        btnRequestAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAppointmentRequestActionPerformed(evt);
+                btnRequestAppointmentActionPerformed(evt);
             }
         });
 
@@ -114,7 +114,7 @@ public class PatientGUI extends javax.swing.JFrame {
                             .addComponent(btnViewHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnViewAppointments, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnViewPrescriptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAppointmentRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnRequestAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(55, 55, 55))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +125,7 @@ public class PatientGUI extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAppointmentRequest, btnGiveDoctorFeedback, btnViewAppointments, btnViewHistory, btnViewPrescriptions});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnGiveDoctorFeedback, btnRequestAppointment, btnViewAppointments, btnViewHistory, btnViewPrescriptions});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +140,7 @@ public class PatientGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnViewHistory)
                         .addGap(11, 11, 11)
-                        .addComponent(btnAppointmentRequest)
+                        .addComponent(btnRequestAppointment)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnGiveDoctorFeedback))
                     .addComponent(jScrollPane1))
@@ -171,13 +171,13 @@ public class PatientGUI extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnViewHistoryActionPerformed
 
-    private void btnAppointmentRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentRequestActionPerformed
+    private void btnRequestAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestAppointmentActionPerformed
         PatientRequestAppointmentGUI pGo = new PatientRequestAppointmentGUI();
         PatientGUI pLeave = new PatientGUI();
         pGo.setVisible(true);
         pLeave.setVisible(false);
         dispose();
-    }//GEN-LAST:event_btnAppointmentRequestActionPerformed
+    }//GEN-LAST:event_btnRequestAppointmentActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         LoginGUI loginGUIInstance = new LoginGUI();
@@ -247,10 +247,10 @@ public class PatientGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAppointmentRequest;
     private javax.swing.JButton btnGiveDoctorFeedback;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnRequestAccountTermination;
+    private javax.swing.JButton btnRequestAppointment;
     private javax.swing.JButton btnViewAppointments;
     private javax.swing.JButton btnViewHistory;
     private javax.swing.JButton btnViewPrescriptions;
