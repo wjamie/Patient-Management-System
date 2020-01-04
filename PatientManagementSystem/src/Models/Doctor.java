@@ -17,4 +17,5 @@ public class Doctor extends User{
         this.address = address;
         this.password = password;
     }
+     
 }

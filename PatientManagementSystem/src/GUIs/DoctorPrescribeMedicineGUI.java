@@ -5,6 +5,8 @@
  */
 package GUIs;
 
+import Models.*;
+
 
 
 /**
@@ -57,7 +59,7 @@ public class DoctorPrescribeMedicineGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("Prescribe Medicines");
 
-        cmbMedicineChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbMedicineChoice.setModel(new javax.swing.DefaultComboBoxModel<>(MedicineArrayClass.getMedicinesNamesAsStringArray()));
 
         btnPrescribe.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnPrescribe.setText("Prescribe");
@@ -67,7 +69,7 @@ public class DoctorPrescribeMedicineGUI extends javax.swing.JFrame {
             }
         });
 
-        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
 
         btnDone.setText("Done");
         btnDone.addActionListener(new java.awt.event.ActionListener() {

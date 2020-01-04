@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package GUIs;
-
+import Models.*;
+import javafx.scene.control.Alert;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -29,18 +31,18 @@ public class DoctorOrderMedicineGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnCancel = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
         btnDone = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        txtUserID = new javax.swing.JTextField();
+        txtNewMedicine = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setText("Cancel");
-        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -57,9 +59,9 @@ public class DoctorOrderMedicineGUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Medicine Name:");
 
-        txtUserID.addActionListener(new java.awt.event.ActionListener() {
+        txtNewMedicine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserIDActionPerformed(evt);
+                txtNewMedicineActionPerformed(evt);
             }
         });
 
@@ -71,18 +73,18 @@ public class DoctorOrderMedicineGUI extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 22, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lblGiveDoctorFeedback)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCancel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnDone, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btnDone, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtNewMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnBack))
+                        .addGap(0, 22, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,33 +94,35 @@ public class DoctorOrderMedicineGUI extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(txtUserID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 175, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancel)
-                    .addComponent(btnDone))
-                .addGap(14, 14, 14))
+                    .addComponent(txtNewMedicine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnDone)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                .addComponent(btnBack)
+                .addGap(20, 20, 20))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         DoctorOrderMedicineGUI doctor = new DoctorOrderMedicineGUI();
         DoctorGUI doctorGUIInstance = new DoctorGUI();
         doctorGUIInstance.setVisible(true);
         doctor.setVisible(false);
         dispose();
-    }//GEN-LAST:event_btnCancelActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoneActionPerformed
-        // TODO add your handling code here:
+        MedicineArrayClass.addMedicine(txtNewMedicine.getText());
+        JOptionPane.showMessageDialog(null, "Medicine Added!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+        
     }//GEN-LAST:event_btnDoneActionPerformed
 
-    private void txtUserIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserIDActionPerformed
+    private void txtNewMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNewMedicineActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserIDActionPerformed
+    }//GEN-LAST:event_txtNewMedicineActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,10 +162,10 @@ public class DoctorOrderMedicineGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancel;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnDone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblGiveDoctorFeedback;
-    private javax.swing.JTextField txtUserID;
+    private javax.swing.JTextField txtNewMedicine;
     // End of variables declaration//GEN-END:variables
 }

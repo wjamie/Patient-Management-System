@@ -5,7 +5,7 @@
  */
 package GUIs;
 
-
+import Models.*;
 
 /**
  *
@@ -53,8 +53,13 @@ public class AdminProvideFeedbackGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setText("Provide Feedback to Doctors");
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
-        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsNamesAsStringArray()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,6 +110,19 @@ public class AdminProvideFeedbackGUI extends javax.swing.JFrame {
         admin.setVisible(false);
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        String value = (String) cmbDoctorChoice.getSelectedItem();
+        String doctorID = DoctorArrayClass.getDoctorIDByName(value);
+        DoctorAdminFeedbackArrayClass.addDoctorAdminFeedback(doctorID, txtAreaGiveFeedback.getText());
+        
+        
+        AdminProvideFeedbackGUI admin = new AdminProvideFeedbackGUI();
+        AdminGUI adminGUIInstance = new AdminGUI();
+        adminGUIInstance.setVisible(true);
+        admin.setVisible(false);
+        dispose();
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments

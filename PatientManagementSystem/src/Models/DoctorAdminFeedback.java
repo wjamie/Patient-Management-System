@@ -9,14 +9,14 @@ package Models;
  *
  * @author Walker
  */
-public class DoctorFeedback {
+public class DoctorAdminFeedback {
     private String doctorID;
-    private int rating;
+    
     private String feedback;
             
-    public DoctorFeedback(String doctorID, int rating, String feedback) {
+    public DoctorAdminFeedback(String doctorID, String feedback) {
         this.doctorID = doctorID;
-        this.rating = rating;
+       
         this.feedback = feedback;
        
     }
@@ -29,13 +29,7 @@ public class DoctorFeedback {
         this.doctorID = doctorID;
     }
 
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
+    
 
     public String getFeedback() {
         return feedback;

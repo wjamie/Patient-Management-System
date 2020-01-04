@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package GUIs;
-
+import Models.*;
 
 
 /**
@@ -51,7 +51,7 @@ public class PatientRequestAppointmentGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("Request Appointment");
 
-        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsNamesAsStringArray()));
 
         txtAppointmentDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

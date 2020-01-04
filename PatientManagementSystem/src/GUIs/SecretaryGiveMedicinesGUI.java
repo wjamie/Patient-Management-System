@@ -5,6 +5,8 @@
  */
 package GUIs;
 
+import Models.*;
+
 
 
 /**
@@ -57,7 +59,7 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
 
         jLabel2.setText("Dosage/Quantity:");
 
-        cmbMedicineChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbMedicineChoice.setModel(new javax.swing.DefaultComboBoxModel<>(MedicineArrayClass.getMedicinesNamesAsStringArray()));
         cmbMedicineChoice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbMedicineChoiceActionPerformed(evt);
@@ -72,7 +74,12 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
             }
         });
 
-        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
+        cmbPatientChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbPatientChoiceActionPerformed(evt);
+            }
+        });
 
         btnDone.setText("Done");
         btnDone.addActionListener(new java.awt.event.ActionListener() {
@@ -152,6 +159,10 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
     private void cmbMedicineChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMedicineChoiceActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbMedicineChoiceActionPerformed
+
+    private void cmbPatientChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientChoiceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbPatientChoiceActionPerformed
 
     /**
      * @param args the command line arguments

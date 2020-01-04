@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package GUIs;
+import Models.*;
+
 
 
 
@@ -51,7 +53,7 @@ public class DoctorViewPatientHistoryGUI extends javax.swing.JFrame {
         txtPatientHistory.setRows(5);
         jScrollPane1.setViewportView(txtPatientHistory);
 
-        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

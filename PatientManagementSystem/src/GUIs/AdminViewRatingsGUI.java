@@ -5,7 +5,7 @@
  */
 package GUIs;
 
-
+import Models.*;
 
 /**
  *
@@ -18,6 +18,7 @@ public class AdminViewRatingsGUI extends javax.swing.JFrame {
      */
     public AdminViewRatingsGUI() {
         initComponents();
+       
     }
 
     /**
@@ -51,7 +52,12 @@ public class AdminViewRatingsGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("View Ratings");
 
-        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsNamesAsStringArray()));
+        cmbDoctorChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbDoctorChoiceActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,6 +104,10 @@ public class AdminViewRatingsGUI extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
+    private void cmbDoctorChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorChoiceActionPerformed
+       txtAreaGiveFeedback.setText(DoctorFeedbackArrayClass.showDoctorFeedback(cmbDoctorChoice.getSelectedItem().toString()));
+    }//GEN-LAST:event_cmbDoctorChoiceActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -126,6 +136,8 @@ public class AdminViewRatingsGUI extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
  
+        
+        
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

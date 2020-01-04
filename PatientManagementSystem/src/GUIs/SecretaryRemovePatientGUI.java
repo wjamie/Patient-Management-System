@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package GUIs;
+import Models.*;
+
+import javax.swing.ComboBoxModel;
+import javax.swing.JComboBox;
 
 
 
@@ -17,6 +21,8 @@ public class SecretaryRemovePatientGUI extends javax.swing.JFrame {
      * Creates new form PatientGiveFeedbackGUI
      */
     public SecretaryRemovePatientGUI() {
+       
+        
         initComponents();
     }
 
@@ -32,10 +38,10 @@ public class SecretaryRemovePatientGUI extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
         btnRemovePatient = new javax.swing.JButton();
-        cmbPatient = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
+        cmbPatient = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,13 +62,18 @@ public class SecretaryRemovePatientGUI extends javax.swing.JFrame {
             }
         });
 
-        cmbPatient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         jLabel1.setText("Patient Removal Requests");
+
+        cmbPatient.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
+        cmbPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbPatientActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,7 +91,7 @@ public class SecretaryRemovePatientGUI extends javax.swing.JFrame {
                         .addComponent(btnRemovePatient)
                         .addGap(35, 35, 35))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(cmbPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cmbPatient, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -121,8 +132,19 @@ public class SecretaryRemovePatientGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnRemovePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemovePatientActionPerformed
-        // TODO add your handling code here:
+        
+        String value = (String) cmbPatient.getSelectedItem();
+        try {
+             PatientArrayClass.removePatientByCMBName(value);
+        } catch (Exception e) {
+        }
+       
+        cmbPatient.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
     }//GEN-LAST:event_btnRemovePatientActionPerformed
+
+    private void cmbPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbPatientActionPerformed
 
     /**
      * @param args the command line arguments

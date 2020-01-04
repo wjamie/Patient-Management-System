@@ -5,6 +5,8 @@
  */
 package GUIs;
 
+import Models.*;
+
 
 
 /**
@@ -35,7 +37,6 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
         txtDoctorsAppointments = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
-        cmbDoctorChoice = new javax.swing.JComboBox<>();
         btnCreateAppointment = new javax.swing.JButton();
         txtDate = new javax.swing.JTextField();
         cmbPatientChoice = new javax.swing.JComboBox<>();
@@ -55,12 +56,10 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
         txtDoctorsAppointments.setRows(5);
         jScrollPane1.setViewportView(txtDoctorsAppointments);
 
-        jLabel2.setText("Selected Doctor's current appointments");
+        jLabel2.setText("Your Current Appointments");
 
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("Create Appointment");
-
-        cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         btnCreateAppointment.setText("Create Appointment");
         btnCreateAppointment.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +68,7 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
             }
         });
 
-        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,19 +82,15 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jScrollPane1)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cmbDoctorChoice, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblGiveDoctorFeedback)))
-                            .addGap(18, 18, 18)
+                                .addComponent(lblGiveDoctorFeedback, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cmbPatientChoice, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(113, 113, 113)
                             .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(btnCancel)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCreateAppointment))))
+                            .addComponent(btnCreateAppointment))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -108,7 +103,6 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbDoctorChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jLabel2)
@@ -178,7 +172,6 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnCreateAppointment;
-    private javax.swing.JComboBox<String> cmbDoctorChoice;
     private javax.swing.JComboBox<String> cmbPatientChoice;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
