@@ -5,6 +5,8 @@
  */
 package Models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Walker
@@ -14,8 +16,9 @@ public abstract class User {
     protected String name;
     protected String address;
     protected String password;
-
-  
+   
+   
+    
     public String getID() {
         return ID;
     }

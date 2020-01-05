@@ -16,7 +16,8 @@ public class DoctorGUI extends javax.swing.JFrame {
      */
     public DoctorGUI() {
         initComponents();
-          txtAreaPatient.setText(DoctorAdminFeedbackArrayClass.showDoctorAdminFeedback("Dr Walker"));
+          //txtAreaPatient.setText(DoctorAdminFeedbackArrayClass.showDoctorAdminFeedback("Dr Walker"));
+          txtAreaPatient.setText("Welcome " + CurrentUser.currentUser.getName());
     }
 
     /**

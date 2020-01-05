@@ -22,21 +22,35 @@ public class AppointmentArrayClass {
     }
     
     public static String showDoctorAppointments(String doctorName){
-    ArrayList<String> doctorFeedback = new ArrayList<>();
+    ArrayList<String> appoints = new ArrayList<>();
     
     String doctorID = DoctorArrayClass.getDoctorIDByName(doctorName);
          for (Appointment p: appointments) {
              
              if(doctorID.equals(p.getDoctorID())){
-                 doctorFeedback.add(String.valueOf(p.getPatientID()));
-                 doctorFeedback.add(p.getPossibleDates());
+                 
+                 appoints.add(p.getPossibleDates());
              }
              
          }
-         String feedbackString = "Here is " + doctorName + " 's feedback:  " + doctorFeedback;
+         String feedbackString = "Here is " + doctorName + " 's appointments:  " + appoints;
          return feedbackString;
      }
     
-
+     public static String showPatientAppointments(String patientName){
+    ArrayList<String> appoints = new ArrayList<>();
     
+    String patientID = PatientArrayClass.getPatientIDByName(patientName);
+         for (Appointment p: appointments) {
+             
+             if(patientID.equals(p.getPatientID())){
+                 
+                 appoints.add(p.getPossibleDates());
+             }
+             
+         }
+         String feedbackString = "Here is " + patientName + " 's appointments:  " + appoints;
+         return feedbackString;
+     }
+  
 }

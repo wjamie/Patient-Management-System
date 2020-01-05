@@ -41,4 +41,16 @@ public class AdminArrayClass {
          return adminNamesAsStringArray;
      }
     
+      public static boolean AdminLogIn(String ID, String pass){
+     boolean log = false;
+         for (Admin d: admins){
+             if (d.getID().equals(ID) && d.getPassword().equals(pass)){
+                 log = true;
+               CurrentUser.makeUser(d);
+               
+             }
+         }
+         return log;
+     }
+
 }

@@ -18,6 +18,8 @@ public class DoctorViewAppointmentsGUI extends javax.swing.JFrame {
      */
     public DoctorViewAppointmentsGUI() {
         initComponents();
+          
+        txtDoctorsAppointments.setText(AppointmentArrayClass.showDoctorAppointments( Doctor.currentDoctor.getName()));
     }
 
     /**

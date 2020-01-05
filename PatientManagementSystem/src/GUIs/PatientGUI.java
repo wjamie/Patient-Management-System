@@ -16,6 +16,7 @@ public class PatientGUI extends javax.swing.JFrame {
      */
     public PatientGUI() {
         initComponents();
+        txtAreaPatient.setText("Welcome " + CurrentUser.currentUser.getName());
     }
 
     /**

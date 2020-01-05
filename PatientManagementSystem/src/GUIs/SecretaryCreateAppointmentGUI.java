@@ -37,12 +37,12 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
         cmbPatientChoice = new javax.swing.JComboBox<>();
         cmbDoctorChoice = new javax.swing.JComboBox<>();
         txtDate = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDoctorsAppointments = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,8 +66,12 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
         cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
 
         cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsNamesAsStringArray()));
-
-        jLabel1.setText("Type date of appointment  (e.g. Jan 1)");
+        cmbDoctorChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbDoctorChoiceActionPerformed(evt);
+            }
+        });
+        cmbDoctorChoice.setSelectedIndex(0);
 
         txtDoctorsAppointments.setColumns(20);
         txtDoctorsAppointments.setRows(5);
@@ -78,6 +82,8 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
         jLabel3.setText("Patient");
 
         jLabel4.setText("Doctor");
+
+        jLabel1.setText("Type date of appointment  (e.g. 9:00am Jan 1st)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,7 +97,7 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCancel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCreateAppointment)
                         .addGap(35, 35, 35))
                     .addGroup(layout.createSequentialGroup()
@@ -125,9 +131,9 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
                 .addComponent(lblGiveDoctorFeedback)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -157,8 +163,15 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnCreateAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAppointmentActionPerformed
-        // TODO add your handling code here:
+        Doctor d1 = DoctorArrayClass.getDoctorByName((String) cmbDoctorChoice.getSelectedItem());
+        Patient p1 = PatientArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
+        AppointmentArrayClass.addAppointment(d1.getID(), p1.getID(), txtDate.getText());
     }//GEN-LAST:event_btnCreateAppointmentActionPerformed
+
+    private void cmbDoctorChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorChoiceActionPerformed
+      Doctor d1 = DoctorArrayClass.getDoctorByName((String) cmbDoctorChoice.getSelectedItem());
+        txtDoctorsAppointments.setText(AppointmentArrayClass.showDoctorAppointments(d1.getName()));
+    }//GEN-LAST:event_cmbDoctorChoiceActionPerformed
 
     /**
      * @param args the command line arguments

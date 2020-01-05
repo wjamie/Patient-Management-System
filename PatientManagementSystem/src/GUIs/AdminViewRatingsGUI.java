@@ -58,6 +58,7 @@ public class AdminViewRatingsGUI extends javax.swing.JFrame {
                 cmbDoctorChoiceActionPerformed(evt);
             }
         });
+        cmbDoctorChoice.setSelectedIndex(0);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -68,6 +68,25 @@ public class DoctorArrayClass {
          return doctorNames;
      }
     
+     public static boolean DoctorLogIn(String ID, String pass){
+     boolean log = false;
+         for (Doctor d: doctors){
+             if (d.getID().equals(ID) && d.getPassword().equals(pass)){
+                 log = true;
+                 CurrentUser.makeUser(d);
+                 Doctor.makeCurrentDoctor(d);
+             }
+         }
+         return log;
+     }
+    
+    
+    
+    
+    
+    
+    
+    
     public static String[] getDoctorsNamesAsStringArray(){
     ArrayList<String> doctorNames = new ArrayList<>();
  

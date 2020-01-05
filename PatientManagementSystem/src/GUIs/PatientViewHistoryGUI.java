@@ -18,6 +18,8 @@ public class PatientViewHistoryGUI extends javax.swing.JFrame {
      */
     public PatientViewHistoryGUI() {
         initComponents();
+        
+        txtHistory.setText(Patient.currentPatient.showPatientHistory());
     }
 
     /**
@@ -31,7 +33,7 @@ public class PatientViewHistoryGUI extends javax.swing.JFrame {
 
         btnCancel = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtAreaGiveFeedback = new javax.swing.JTextArea();
+        txtHistory = new javax.swing.JTextArea();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,9 +45,9 @@ public class PatientViewHistoryGUI extends javax.swing.JFrame {
             }
         });
 
-        txtAreaGiveFeedback.setColumns(20);
-        txtAreaGiveFeedback.setRows(5);
-        jScrollPane1.setViewportView(txtAreaGiveFeedback);
+        txtHistory.setColumns(20);
+        txtHistory.setRows(5);
+        jScrollPane1.setViewportView(txtHistory);
 
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("View Your History");
@@ -134,6 +136,6 @@ public class PatientViewHistoryGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnCancel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblGiveDoctorFeedback;
-    private javax.swing.JTextArea txtAreaGiveFeedback;
+    private javax.swing.JTextArea txtHistory;
     // End of variables declaration//GEN-END:variables
 }

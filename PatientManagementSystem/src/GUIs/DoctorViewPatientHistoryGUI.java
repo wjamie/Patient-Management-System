@@ -20,6 +20,7 @@ public class DoctorViewPatientHistoryGUI extends javax.swing.JFrame {
      */
     public DoctorViewPatientHistoryGUI() {
         initComponents();
+       
     }
 
     /**
@@ -54,6 +55,12 @@ public class DoctorViewPatientHistoryGUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtPatientHistory);
 
         cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
+        cmbPatientChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbPatientChoiceActionPerformed(evt);
+            }
+        });
+        cmbPatientChoice.setSelectedIndex(0);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,6 +102,12 @@ public class DoctorViewPatientHistoryGUI extends javax.swing.JFrame {
         doctor.setVisible(false);
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void cmbPatientChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientChoiceActionPerformed
+        Patient p = PatientArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
+      
+        txtPatientHistory.setText(p.showPatientHistory());
+    }//GEN-LAST:event_cmbPatientChoiceActionPerformed
 
     /**
      * @param args the command line arguments

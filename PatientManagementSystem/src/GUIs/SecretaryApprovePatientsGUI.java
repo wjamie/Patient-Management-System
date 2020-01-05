@@ -18,6 +18,7 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
      */
     public SecretaryApprovePatientsGUI() {
         initComponents();
+     
     }
 
     /**
@@ -33,14 +34,10 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback = new javax.swing.JLabel();
         btnGiveMedicine = new javax.swing.JButton();
         cmbPatientChoice = new javax.swing.JComboBox<>();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtUserID = new javax.swing.JTextField();
         txtName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtAddress = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        txtAddress1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         txtAge = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -65,19 +62,16 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
             }
         });
 
-        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("User ID:");
+        cmbPatientChoice.setModel(new javax.swing.DefaultComboBoxModel<>(PatientPendingArrayClass.getPatientsNamesAsStringArray()));
+        cmbPatientChoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbPatientChoiceActionPerformed(evt);
+            }
+        });
+        cmbPatientChoice.setSelectedIndex(0);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Name:");
-
-        txtUserID.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserIDActionPerformed(evt);
-            }
-        });
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Address:");
@@ -85,15 +79,6 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
         txtAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAddressActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Password:");
-
-        txtAddress1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddress1ActionPerformed(evt);
             }
         });
 
@@ -134,21 +119,17 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                                 .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
                                     .addComponent(jLabel3)
-                                    .addComponent(jLabel1)
                                     .addComponent(jLabel2)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel5))
-                                .addGap(18, 18, 18)
+                                .addGap(24, 24, 24)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtAddress)
-                                    .addComponent(txtAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtAge))))
-                        .addContainerGap(52, Short.MAX_VALUE))))
+                                    .addComponent(txtAge)
+                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(56, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,21 +140,15 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(21, 21, 21)
+                        .addGap(38, 38, 38)
                         .addComponent(jLabel2)
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel4))
+                        .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtUserID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(38, 38, 38)
                         .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -184,7 +159,7 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                         .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
                     .addComponent(btnGiveMedicine))
@@ -211,14 +186,6 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAddressActionPerformed
 
-    private void txtAddress1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddress1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAddress1ActionPerformed
-
-    private void txtUserIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserIDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtUserIDActionPerformed
-
     private void txtAgeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgeActionPerformed
@@ -226,6 +193,11 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
     private void txtGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtGenderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtGenderActionPerformed
+
+    private void cmbPatientChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientChoiceActionPerformed
+       Patient p = PatientPendingArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
+        txtName.setText(p.getName()); txtAddress.setText(p.getAddress()); txtAge.setText(String.valueOf(p.getAge())); txtGender.setText(p.getGender());
+    }//GEN-LAST:event_cmbPatientChoiceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,18 +240,14 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnGiveMedicine;
     private javax.swing.JComboBox<String> cmbPatientChoice;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel lblGiveDoctorFeedback;
     private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtAddress1;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtUserID;
     // End of variables declaration//GEN-END:variables
 }

@@ -49,8 +49,19 @@ public class DoctorAddConsultationNotesGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setText("Add Consultation Notes");
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         cmbPatient.setModel(new javax.swing.DefaultComboBoxModel<>(PatientArrayClass.getPatientsNamesAsStringArray()));
+        cmbPatient.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbPatientActionPerformed(evt);
+            }
+        });
+        cmbPatient.setSelectedIndex(0);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,6 +108,15 @@ public class DoctorAddConsultationNotesGUI extends javax.swing.JFrame {
         doctor.setVisible(false);
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+         Patient d =  PatientArrayClass.getPatientByName((String)cmbPatient.getSelectedItem());
+         d.historys.add(txtNotes.getText());
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void cmbPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbPatientActionPerformed
 
     /**
      * @param args the command line arguments

@@ -18,6 +18,7 @@ public class PatientViewAppointmentsGUI extends javax.swing.JFrame {
      */
     public PatientViewAppointmentsGUI() {
         initComponents();
+        txtPatientAppointments.setText(AppointmentArrayClass.showPatientAppointments( Patient.currentPatient.getName()));
     }
 
     /**
@@ -31,7 +32,7 @@ public class PatientViewAppointmentsGUI extends javax.swing.JFrame {
 
         btnCancel = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtAreaGiveFeedback = new javax.swing.JTextArea();
+        txtPatientAppointments = new javax.swing.JTextArea();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,9 +44,9 @@ public class PatientViewAppointmentsGUI extends javax.swing.JFrame {
             }
         });
 
-        txtAreaGiveFeedback.setColumns(20);
-        txtAreaGiveFeedback.setRows(5);
-        jScrollPane1.setViewportView(txtAreaGiveFeedback);
+        txtPatientAppointments.setColumns(20);
+        txtPatientAppointments.setRows(5);
+        jScrollPane1.setViewportView(txtPatientAppointments);
 
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("View Your Appointments");
@@ -146,6 +147,6 @@ public class PatientViewAppointmentsGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnCancel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblGiveDoctorFeedback;
-    private javax.swing.JTextArea txtAreaGiveFeedback;
+    private javax.swing.JTextArea txtPatientAppointments;
     // End of variables declaration//GEN-END:variables
 }

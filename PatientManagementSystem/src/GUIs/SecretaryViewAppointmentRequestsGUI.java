@@ -31,7 +31,6 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
 
         btnCancel = new javax.swing.JButton();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
-        btnUpdate = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDoctorsAppointments = new javax.swing.JTextArea();
 
@@ -47,13 +46,6 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("View Appointment Requests");
 
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-
         txtDoctorsAppointments.setColumns(20);
         txtDoctorsAppointments.setRows(5);
         jScrollPane1.setViewportView(txtDoctorsAppointments);
@@ -67,9 +59,7 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(lblGiveDoctorFeedback)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnUpdate)
-                        .addGap(42, 42, 42))
+                        .addGap(42, 279, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnCancel, javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,11 +70,9 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblGiveDoctorFeedback)
-                    .addComponent(btnUpdate))
+                .addComponent(lblGiveDoctorFeedback)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCancel)
                 .addGap(21, 21, 21))
@@ -101,10 +89,6 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
         secretary.setVisible(false);
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
-
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUpdateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,7 +129,6 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnUpdate;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblGiveDoctorFeedback;
     private javax.swing.JTextArea txtDoctorsAppointments;

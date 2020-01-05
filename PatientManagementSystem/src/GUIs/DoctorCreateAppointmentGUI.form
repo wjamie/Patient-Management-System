@@ -86,7 +86,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Type date of appointment  (e.g. Jan 1)"/>
+        <Property name="text" type="java.lang.String" value="Type date of appointment  (e.g. 9:00am Jan 1st)"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">

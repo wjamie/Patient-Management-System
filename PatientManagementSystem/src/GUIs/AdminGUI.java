@@ -16,6 +16,8 @@ public class AdminGUI extends javax.swing.JFrame {
      */
     public AdminGUI() {
         initComponents();
+        
+        txtAreaPatient.setText("Welcome " + CurrentUser.currentUser.getName());
     }
 
     /**

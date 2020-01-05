@@ -5,6 +5,7 @@
  */
 package Models;
 
+import static Models.DoctorArrayClass.doctors;
 import java.util.ArrayList;
 
 /**
@@ -13,6 +14,8 @@ import java.util.ArrayList;
  */
 public class PatientArrayClass {
      
+    
+    
     public static ArrayList<Patient> patients = new ArrayList<>();
   
      public static void addPatient(String ID, String name, String address, String password, int age, String gender){
@@ -30,6 +33,16 @@ public class PatientArrayClass {
          }
      }
     
+      public static Patient getPatientByName(String value){
+      Patient patient = null;
+        for (Patient d: patients) {
+             d.getName();
+             if (d.getName().equals(value)) {
+                 patient = d;
+             }
+         }
+        return patient;
+     }
       
     public static ArrayList<String> getPatientsNames(){
     ArrayList<String> patientNames = new ArrayList<>();
@@ -52,4 +65,28 @@ public class PatientArrayClass {
          return patientNamesAsStringArray;
      }
     
+      public static String getPatientIDByName(String value){
+      String patientID = "";
+        for (Patient d: patients) {
+             d.getName();
+             if (d.getName().equals(value)) {
+                 patientID = d.getID();
+             }
+         }
+        return patientID;
+     }
+    
+    
+    
+     public static boolean PatientLogIn(String ID, String pass){
+     boolean log = false;
+         for (Patient d: patients){
+             if (d.getID().equals(ID) && d.getPassword().equals(pass)){
+                 log = true;
+                 CurrentUser.makeUser(d);
+                 Patient.makeCurrentPatient(d);
+             }
+         }
+         return log;
+     }
 }

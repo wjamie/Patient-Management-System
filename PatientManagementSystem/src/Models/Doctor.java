@@ -17,5 +17,44 @@ public class Doctor extends User{
         this.address = address;
         this.password = password;
     }
+
+    public static Doctor currentDoctor;
+    
+    public static void makeCurrentDoctor(Doctor doctor){
+        currentDoctor = doctor;
+    }
+     
+   
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
      
 }

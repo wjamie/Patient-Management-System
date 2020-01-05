@@ -5,6 +5,7 @@
  */
 package Models;
 
+import static Models.DoctorArrayClass.doctors;
 import java.util.ArrayList;
 
 /**
@@ -35,7 +36,15 @@ public class SecretaryArrayClass {
          }
      }
     
-    
+       public static boolean PatientLogIn(String ID, String pass){
+     boolean log = false;
+         for (Secretary d: secretarys){
+             if (d.getID().equals(ID) && d.getPassword().equals(pass)){
+                 log = true;
+             }
+         }
+         return log;
+     }
     
     public static ArrayList<String> getSecretarysNames(){
     ArrayList<String> secretaryNames = new ArrayList<>();
@@ -58,4 +67,15 @@ public class SecretaryArrayClass {
          return secretaryNamesAsStringArray;
      }
     
+    
+    public static boolean SecretaryLogIn(String ID, String pass){
+     boolean log = false;
+         for (Secretary d: secretarys){
+             if (d.getID().equals(ID) && d.getPassword().equals(pass)){
+                 log = true;
+                 CurrentUser.makeUser(d);
+             }
+         }
+         return log;
+     }
 }

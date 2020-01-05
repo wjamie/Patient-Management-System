@@ -8,6 +8,7 @@ package GUIs;
 import Models.*;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import jdk.nashorn.internal.ir.BreakNode;
@@ -355,6 +356,7 @@ public class AdminAddRemoveStaffGUI extends javax.swing.JFrame {
     private void btnCreateDoctorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateDoctorActionPerformed
         DoctorArrayClass.addDoctor(txtDoctorUserID.getText(), txtDoctorName.getText(), txtDoctorAddress.getText(), txtDoctorPassword.getText());
         cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsSecretarysAsStringArray()));
+        JOptionPane.showMessageDialog(null, "Doctor Account Added!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnCreateDoctorActionPerformed
 
     private void txtSecretaryAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSecretaryAddressActionPerformed
@@ -368,6 +370,7 @@ public class AdminAddRemoveStaffGUI extends javax.swing.JFrame {
     private void btnCreateSecretaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateSecretaryActionPerformed
          SecretaryArrayClass.addSecretary(txtSecretaryUserID.getText(), txtSecretaryName.getText(), txtSecretaryAddress.getText(), txtSecretaryPassword.getText());  
          cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsSecretarysAsStringArray()));
+         JOptionPane.showMessageDialog(null, "Secretary Account Added!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnCreateSecretaryActionPerformed
 
     private void cmbDoctorChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorChoiceActionPerformed
@@ -383,6 +386,7 @@ public class AdminAddRemoveStaffGUI extends javax.swing.JFrame {
         }
   
         cmbDoctorChoice.setModel(new javax.swing.DefaultComboBoxModel<>(DoctorArrayClass.getDoctorsSecretarysAsStringArray()));
+        
     }//GEN-LAST:event_btnRemoveStaffActionPerformed
 
     private void tabpanelStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_tabpanelStateChanged

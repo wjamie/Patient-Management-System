@@ -17,6 +17,7 @@ public class SecretaryGUI extends javax.swing.JFrame {
      */
     public SecretaryGUI() {
         initComponents();
+        txtAreaPatient.setText("Welcome " + CurrentUser.currentUser.getName());
     }
 
     /**

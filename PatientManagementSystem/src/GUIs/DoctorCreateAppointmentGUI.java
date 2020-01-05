@@ -20,6 +20,8 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
      */
     public DoctorCreateAppointmentGUI() {
         initComponents();
+         txtDoctorsAppointments.setText(AppointmentArrayClass.showDoctorAppointments( Doctor.currentDoctor.getName()));
+      
     }
 
     /**
@@ -50,7 +52,7 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Type date of appointment  (e.g. Jan 1)");
+        jLabel1.setText("Type date of appointment  (e.g. 9:00am Jan 1st)");
 
         txtDoctorsAppointments.setColumns(20);
         txtDoctorsAppointments.setRows(5);
@@ -120,7 +122,8 @@ public class DoctorCreateAppointmentGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAppointmentActionPerformed
-        // TODO add your handling code here:
+        Patient p1 = PatientArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
+        AppointmentArrayClass.addAppointment(Doctor.currentDoctor.getID(), p1.getID(), txtDate.getText());
     }//GEN-LAST:event_btnCreateAppointmentActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
