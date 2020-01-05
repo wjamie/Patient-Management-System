@@ -6,6 +6,7 @@
 package GUIs;
 
 import Models.*;
+import javax.swing.JOptionPane;
 
 
 
@@ -43,7 +44,7 @@ public class DoctorPrescribeMedicineGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -135,7 +136,7 @@ public class DoctorPrescribeMedicineGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPrescribeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrescribeActionPerformed
-        // TODO add your handling code here:
+         JOptionPane.showMessageDialog(null, "Medicine Prescribed", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnPrescribeActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed

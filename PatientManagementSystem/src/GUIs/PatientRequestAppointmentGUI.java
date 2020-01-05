@@ -5,6 +5,7 @@
  */
 package GUIs;
 import Models.*;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -40,8 +41,13 @@ public class PatientRequestAppointmentGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -123,6 +129,14 @@ public class PatientRequestAppointmentGUI extends javax.swing.JFrame {
     private void txtAppointmentDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAppointmentDateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAppointmentDateActionPerformed
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        
+       
+        txtAppointmentDate.setText("");
+        
+        JOptionPane.showMessageDialog(null, "Appointment Requested", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments

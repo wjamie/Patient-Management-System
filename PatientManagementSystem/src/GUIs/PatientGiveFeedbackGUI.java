@@ -5,6 +5,7 @@
  */
 package GUIs;
 import Models.*;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -47,7 +48,7 @@ public class PatientGiveFeedbackGUI extends javax.swing.JFrame {
             }
         });
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -142,6 +143,8 @@ public class PatientGiveFeedbackGUI extends javax.swing.JFrame {
         patientGUIInstance.setVisible(true);
         patientGiveFeedbackGUIinstance.setVisible(false);
         dispose();
+        
+         JOptionPane.showMessageDialog(null, "Feedback Given!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**

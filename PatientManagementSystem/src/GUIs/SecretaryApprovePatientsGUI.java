@@ -5,6 +5,7 @@
  */
 package GUIs;
 import Models.*;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -45,7 +46,7 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -109,7 +110,7 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCancel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 312, Short.MAX_VALUE)
                         .addComponent(btnGiveMedicine)
                         .addGap(35, 35, 35))
                     .addGroup(layout.createSequentialGroup()
@@ -197,6 +198,8 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
     private void cmbPatientChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientChoiceActionPerformed
        Patient p = PatientPendingArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
         txtName.setText(p.getName()); txtAddress.setText(p.getAddress()); txtAge.setText(String.valueOf(p.getAge())); txtGender.setText(p.getGender());
+        
+         JOptionPane.showMessageDialog(null, "Patient Account Approved!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_cmbPatientChoiceActionPerformed
 
     /**

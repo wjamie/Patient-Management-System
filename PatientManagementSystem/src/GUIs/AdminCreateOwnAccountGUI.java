@@ -6,6 +6,7 @@
 package GUIs;
 
 import Models.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -43,7 +44,7 @@ public class AdminCreateOwnAccountGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -167,6 +168,7 @@ public class AdminCreateOwnAccountGUI extends javax.swing.JFrame {
 
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
         AdminArrayClass.addAdmin(txtUserID.getText(), txtName.getText(), txtAddress.getText(), txtPassword.getText());
+         JOptionPane.showMessageDialog(null, "Admin Account Created!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     /**

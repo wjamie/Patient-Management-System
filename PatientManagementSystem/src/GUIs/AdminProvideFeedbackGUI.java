@@ -6,6 +6,7 @@
 package GUIs;
 
 import Models.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,7 +39,7 @@ public class AdminProvideFeedbackGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -122,6 +123,8 @@ public class AdminProvideFeedbackGUI extends javax.swing.JFrame {
         adminGUIInstance.setVisible(true);
         admin.setVisible(false);
         dispose();
+        
+        JOptionPane.showMessageDialog(null, "Medicine Added!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**

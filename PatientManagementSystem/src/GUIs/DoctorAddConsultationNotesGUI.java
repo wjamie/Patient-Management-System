@@ -6,6 +6,7 @@
 package GUIs;
 
 import Models.*;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -112,6 +113,7 @@ public class DoctorAddConsultationNotesGUI extends javax.swing.JFrame {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
          Patient d =  PatientArrayClass.getPatientByName((String)cmbPatient.getSelectedItem());
          d.historys.add(txtNotes.getText());
+         JOptionPane.showMessageDialog(null, "Notes saved!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnSubmitActionPerformed
 
     private void cmbPatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientActionPerformed

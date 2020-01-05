@@ -6,6 +6,7 @@
 package GUIs;
 
 import Models.*;
+import javax.swing.JOptionPane;
 
 
 
@@ -46,7 +47,7 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Back");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -171,6 +172,8 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
     private void cmbDoctorChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorChoiceActionPerformed
       Doctor d1 = DoctorArrayClass.getDoctorByName((String) cmbDoctorChoice.getSelectedItem());
         txtDoctorsAppointments.setText(AppointmentArrayClass.showDoctorAppointments(d1.getName()));
+        
+         JOptionPane.showMessageDialog(null, "Appointment Created!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_cmbDoctorChoiceActionPerformed
 
     /**
