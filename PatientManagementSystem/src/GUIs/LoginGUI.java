@@ -44,6 +44,7 @@ public class LoginGUI extends javax.swing.JFrame {
         btnAdmin = new javax.swing.JButton();
         btnSecretary = new javax.swing.JButton();
         btnDoctor = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         tabCreateAcc = new javax.swing.JPanel();
         txtAddress = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -101,6 +102,9 @@ public class LoginGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setText("Log In");
+
         javax.swing.GroupLayout tabLoginLayout = new javax.swing.GroupLayout(tabLogin);
         tabLogin.setLayout(tabLoginLayout);
         tabLoginLayout.setHorizontalGroup(
@@ -111,24 +115,28 @@ public class LoginGUI extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLogin))
                     .addGroup(tabLoginLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(32, 32, 32)
-                        .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(txtUserID))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(tabLoginLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(btnPatient)
-                        .addGap(32, 32, 32)
-                        .addComponent(btnAdmin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSecretary)
-                        .addGap(29, 29, 29)
-                        .addComponent(btnDoctor)))
+                        .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tabLoginLayout.createSequentialGroup()
+                                .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(tabLoginLayout.createSequentialGroup()
+                                        .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel1)
+                                            .addComponent(jLabel2))
+                                        .addGap(32, 32, 32)
+                                        .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(txtPassword)
+                                            .addComponent(txtUserID, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel3))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(tabLoginLayout.createSequentialGroup()
+                                .addComponent(btnPatient)
+                                .addGap(32, 32, 32)
+                                .addComponent(btnAdmin)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+                                .addComponent(btnSecretary)
+                                .addGap(29, 29, 29)
+                                .addComponent(btnDoctor)))))
                 .addContainerGap())
         );
         tabLoginLayout.setVerticalGroup(
@@ -140,7 +148,9 @@ public class LoginGUI extends javax.swing.JFrame {
                     .addComponent(btnAdmin)
                     .addComponent(btnSecretary)
                     .addComponent(btnDoctor))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel3)
+                .addGap(27, 27, 27)
                 .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUserID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -148,7 +158,7 @@ public class LoginGUI extends javax.swing.JFrame {
                 .addGroup(tabLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addComponent(btnLogin)
                 .addContainerGap())
         );
@@ -358,7 +368,7 @@ public class LoginGUI extends javax.swing.JFrame {
     private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         String IDString = Login.givePatientID();
         PatientPendingArrayClass.addPatient(IDString, txtName.getText(), txtAddress.getText(), txtPassword.getText(), Integer.parseInt(txtAge.getText()), genderValue );
-        JOptionPane.showMessageDialog(null, "Account Created, Your UserID will be: " + Login.givePatientID() + "\n" + "The Secretary will review your account before you may login", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+        JOptionPane.showMessageDialog(null, "Account Created, Your UserID will be: " + IDString + "\n" + "The Secretary will review your account before you may login", "Alert", JOptionPane.INFORMATION_MESSAGE); 
         
     }//GEN-LAST:event_btnCreateActionPerformed
 
@@ -420,6 +430,7 @@ public class LoginGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnSecretary;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

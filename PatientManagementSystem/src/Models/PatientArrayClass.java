@@ -12,6 +12,7 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+ // Class for holding PATIENTS (an array of them) and allows adding removing getting LOGIN
 public class PatientArrayClass {
      
     

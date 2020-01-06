@@ -12,6 +12,7 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+ // Class for holding Appointments (an array of them) and allows adding and getting appointments
 public class AppointmentArrayClass {
      
     public static ArrayList<Appointment> appointments = new ArrayList<>();

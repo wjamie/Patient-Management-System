@@ -131,7 +131,10 @@ public class PatientRequestAppointmentGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAppointmentDateActionPerformed
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        
+        String value = (String) cmbDoctorChoice.getSelectedItem();
+        String doctorID = DoctorArrayClass.getDoctorIDByName(value);
+       
+        AppointmentRequestArrayClass.addAppointment(doctorID, Patient.currentPatient.getID(), txtAppointmentDate.getText());
        
         txtAppointmentDate.setText("");
         

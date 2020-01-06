@@ -11,6 +11,7 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+ // Class for holding Admins (an array of admins) and allows adding and getting admins logging in admins 
 public class AdminArrayClass {
      
     public static ArrayList<Admin> admins = new ArrayList<>();

@@ -33,7 +33,7 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
 
         btnCancel = new javax.swing.JButton();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
-        btnGiveMedicine = new javax.swing.JButton();
+        btnApprove = new javax.swing.JButton();
         cmbPatientChoice = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
@@ -43,6 +43,8 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
         txtAge = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         txtGender = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,10 +58,10 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("Approve Patient Accounts");
 
-        btnGiveMedicine.setText("Approve Patient Account");
-        btnGiveMedicine.addActionListener(new java.awt.event.ActionListener() {
+        btnApprove.setText("Approve Patient Account");
+        btnApprove.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGiveMedicineActionPerformed(evt);
+                btnApproveActionPerformed(evt);
             }
         });
 
@@ -101,6 +103,9 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("ID:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,27 +115,37 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCancel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 312, Short.MAX_VALUE)
-                        .addComponent(btnGiveMedicine)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnApprove)
                         .addGap(35, 35, 35))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblGiveDoctorFeedback)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel5))
-                                .addGap(24, 24, 24)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtAddress)
-                                    .addComponent(txtAge)
-                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(56, Short.MAX_VALUE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(40, 40, 40)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel2)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel5))
+                                        .addGap(24, 24, 24)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtAddress)
+                                            .addComponent(txtAge)
+                                            .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel4)
+                                        .addGap(36, 36, 36)
+                                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(72, 72, 72))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblGiveDoctorFeedback)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(56, 56, 56))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,15 +156,20 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cmbPatientChoice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(21, 21, 21)
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -163,7 +183,7 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
-                    .addComponent(btnGiveMedicine))
+                    .addComponent(btnApprove))
                 .addGap(21, 21, 21))
         );
 
@@ -179,9 +199,14 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
-    private void btnGiveMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiveMedicineActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnGiveMedicineActionPerformed
+    private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
+         Patient p = PatientPendingArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
+        
+        
+        PatientArrayClass.addPatient(p.getID(), p.getName(), p.getAddress(), p.getPassword(),p.getAge(), p.getGender());
+        
+        JOptionPane.showMessageDialog(null, "Patient " + p.getID()+ " Account Approved!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+    }//GEN-LAST:event_btnApproveActionPerformed
 
     private void txtAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddressActionPerformed
         // TODO add your handling code here:
@@ -197,9 +222,9 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
 
     private void cmbPatientChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbPatientChoiceActionPerformed
        Patient p = PatientPendingArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
-        txtName.setText(p.getName()); txtAddress.setText(p.getAddress()); txtAge.setText(String.valueOf(p.getAge())); txtGender.setText(p.getGender());
+        txtID.setText(p.getID());txtName.setText(p.getName()); txtAddress.setText(p.getAddress()); txtAge.setText(String.valueOf(p.getAge())); txtGender.setText(p.getGender());
         
-         JOptionPane.showMessageDialog(null, "Patient Account Approved!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+       
     }//GEN-LAST:event_cmbPatientChoiceActionPerformed
 
     /**
@@ -240,17 +265,19 @@ public class SecretaryApprovePatientsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnApprove;
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnGiveMedicine;
     private javax.swing.JComboBox<String> cmbPatientChoice;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel lblGiveDoctorFeedback;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtGender;
+    private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

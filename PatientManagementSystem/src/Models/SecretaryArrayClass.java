@@ -12,6 +12,8 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+// this class holds all secretary objects in an array of them. allows adding removing getting LOGIN
+
 public class SecretaryArrayClass {
      
     public static ArrayList<Secretary> secretarys = new ArrayList<>();

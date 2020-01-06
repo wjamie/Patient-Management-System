@@ -11,6 +11,8 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+// class for holding all pending patients , allows adding removing  getting
+
 public class PatientPendingArrayClass {
      
     public static ArrayList<Patient> patientsPending = new ArrayList<>();

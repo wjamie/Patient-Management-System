@@ -13,6 +13,8 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+// Holds Doctors in array, allows add remove, get, LOGIN
+
 public class DoctorArrayClass {
      
     public static ArrayList<Doctor> doctors = new ArrayList<>();

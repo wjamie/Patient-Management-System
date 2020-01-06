@@ -9,13 +9,50 @@ package Models;
  *
  * @author Walker
  */
+
+  // typical Prescription class with patient ID Medicine and Notes
+
 public class Prescription {
-    private String doctorID;
+   
+  
+    
     private String patientID;
-    private String prescriptionNotes;
     private Medicine prescribedMedicine;
-    private String quantity;
-    private String dosage;
+    private String quantityDosageNotes;
+
+    public Prescription(String patientID, Medicine prescribedMedicine, String quantityDosageNotes) {
+        this.patientID = patientID;
+        this.prescribedMedicine = prescribedMedicine;
+        this.quantityDosageNotes = quantityDosageNotes;
+    }
+
+    
+    
+    
+    public String getPatientID() {
+        return patientID;
+    }
+
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
+    }
+
+    public Medicine getPrescribedMedicine() {
+        return prescribedMedicine;
+    }
+
+    public void setPrescribedMedicine(Medicine prescribedMedicine) {
+        this.prescribedMedicine = prescribedMedicine;
+    }
+
+    public String getQuantityDosageNotes() {
+        return quantityDosageNotes;
+    }
+
+    public void setQuantityDosageNotes(String quantityDosageNotes) {
+        this.quantityDosageNotes = quantityDosageNotes;
+    }
+    
     
     
 }

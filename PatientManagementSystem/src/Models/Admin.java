@@ -11,6 +11,8 @@ package Models;
  */
 public class Admin extends User{ 
     
+    // typical Admin class with constructor getters and setters for id, name password and address
+    
      public Admin(String ID, String name, String address, String password) {
         this.ID = ID;
         this.name = name;

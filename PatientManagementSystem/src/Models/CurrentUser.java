@@ -9,6 +9,7 @@ package Models;
  *
  * @author Walker
  */
+// class to assign current user
 public class CurrentUser {
     
     public static User currentUser;

@@ -161,7 +161,7 @@ public class PatientGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestAccountTerminationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestAccountTerminationActionPerformed
-        // request account removal code
+       
     }//GEN-LAST:event_btnRequestAccountTerminationActionPerformed
 
     private void btnViewHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHistoryActionPerformed

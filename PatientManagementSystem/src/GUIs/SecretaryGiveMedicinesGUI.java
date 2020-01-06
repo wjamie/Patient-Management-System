@@ -150,7 +150,8 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnPrescribeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrescribeActionPerformed
-         JOptionPane.showMessageDialog(null, "Medicine Given!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+        
+        JOptionPane.showMessageDialog(null, "Medicine Given!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnPrescribeActionPerformed
 
     private void btnDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoneActionPerformed

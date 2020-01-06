@@ -12,6 +12,8 @@ import java.util.ArrayList;
  *
  * @author Walker
  */
+ // Class for holding Doctors feedback from patients (an array of them) and allows adding and showing
+
 public class DoctorFeedbackArrayClass {
      
     public static ArrayList<DoctorFeedback> doctorFeedbacks = new ArrayList<>();

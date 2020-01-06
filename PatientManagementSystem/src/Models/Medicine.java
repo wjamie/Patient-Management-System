@@ -9,7 +9,13 @@ package Models;
  *
  * @author Walker
  */
+
+  // Typical Medicine class with getters and setters
+
+
 public class Medicine {
+    
+   
     private String name;
 
       public Medicine(String name) {

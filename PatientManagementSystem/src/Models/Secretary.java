@@ -13,6 +13,8 @@ import Models.User;
  *
  * @author Walker
  */
+// typical secretary class extends user, with getters and setters
+
 public class Secretary extends User{
     
      public Secretary(String ID, String name, String address, String password) {

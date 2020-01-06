@@ -20,11 +20,12 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Open Log in GUI
         LoginGUI loginGUIInstance = new LoginGUI();
         loginGUIInstance.setVisible(true);
         
       
-        
+        //Adding data 
         PatientArrayClass.addPatient("P0001", "John Burrows", "31 Castle Road, Eggton", "password", 23, "Male");
         PatientArrayClass.addPatient("P0002", "Bob Sett", "8 Reaper Hill, Eggton", "applefanta2", 19, "Male");
         PatientArrayClass.addPatient("P0003", "Mary Herman", "23 Toran Road, Eggton", "goryprince6", 38, "Female");
@@ -48,6 +49,9 @@ public class Main {
         AppointmentArrayClass.addAppointment("D0002", "P0002", "21st January");
         AppointmentArrayClass.addAppointment("D0003", "P0003", "9th January");
         
+        AppointmentRequestArrayClass.addAppointment("D0002", "P0001", "9th March");
+        
+        
         SecretaryArrayClass.addSecretary("S0001", "Riley Mel", "7 Castle Road, Eggton", "password");
         SecretaryArrayClass.addSecretary("S0002", "Shirley Reid", "8 Reader Hill, Eggton", "adlenta2");
         SecretaryArrayClass.addSecretary("S0003", "Sheila Thompson", "2 Toran Road, Eggton", "goryince6");
@@ -64,7 +68,12 @@ public class Main {
         MedicineArrayClass.addMedicine("Medicyl");
         MedicineArrayClass.addMedicine("Lipsquityl");
         MedicineArrayClass.addMedicine("Itratitil");
+        
+        PrescriptionArrayClass.addPrescription("P0001", MedicineArrayClass.getMedicineByName("Etynol"), "1 a day for 6 weeks. Make sure to check area regularly");
+        PrescriptionArrayClass.addPrescription("P0002", MedicineArrayClass.getMedicineByName("Niquityl"), "3 a day for 9 weeks. Rub gently before applying");
+        PrescriptionArrayClass.addPrescription("P0003", MedicineArrayClass.getMedicineByName("Medicyl"), "1 a day for 2 weeks. Don't Eat After Taking");
        
+        
         DoctorFeedbackArrayClass.addDoctorFeedback("D0001",4, "Very good guy. Made me better!");
         DoctorFeedbackArrayClass.addDoctorFeedback("D0002",1, "Horrible to me. Gave me terrible advice too!");
         DoctorFeedbackArrayClass.addDoctorFeedback("D0003",5, "Extremely nice doctor, was very smart too!");

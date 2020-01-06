@@ -9,11 +9,21 @@ package Models;
  *
  * @author Walker
  */
+// typical appointment class with doctor, patient and dates as a String
+
 public class Appointment {
     private String doctorID;
     private String patientID;
     private String possibleDates;
 
+      public Appointment(String doctorID,String patientID, String possibleDates) {
+       this.doctorID = doctorID;
+       this.patientID = patientID;
+       this.possibleDates = possibleDates;
+       
+    }
+    
+    
     public String getDoctorID() {
         return doctorID;
     }
@@ -39,12 +49,7 @@ public class Appointment {
     }
     
 
-    public Appointment(String doctorID,String patientID, String possibleDates) {
-       this.doctorID = doctorID;
-       this.patientID = patientID;
-       this.possibleDates = possibleDates;
-       
-    }
+  
     
     
     

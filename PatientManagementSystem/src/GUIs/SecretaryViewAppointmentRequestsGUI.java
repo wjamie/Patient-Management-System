@@ -18,6 +18,7 @@ public class SecretaryViewAppointmentRequestsGUI extends javax.swing.JFrame {
      */
     public SecretaryViewAppointmentRequestsGUI() {
         initComponents();
+        txtDoctorsAppointments.setText(AppointmentRequestArrayClass.showAllPatientAppointmentsRequests());
     }
 
     /**

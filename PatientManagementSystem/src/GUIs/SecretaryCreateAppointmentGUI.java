@@ -167,13 +167,15 @@ public class SecretaryCreateAppointmentGUI extends javax.swing.JFrame {
         Doctor d1 = DoctorArrayClass.getDoctorByName((String) cmbDoctorChoice.getSelectedItem());
         Patient p1 = PatientArrayClass.getPatientByName((String) cmbPatientChoice.getSelectedItem());
         AppointmentArrayClass.addAppointment(d1.getID(), p1.getID(), txtDate.getText());
+        
+         JOptionPane.showMessageDialog(null, "Appointment Created!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnCreateAppointmentActionPerformed
 
     private void cmbDoctorChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbDoctorChoiceActionPerformed
       Doctor d1 = DoctorArrayClass.getDoctorByName((String) cmbDoctorChoice.getSelectedItem());
         txtDoctorsAppointments.setText(AppointmentArrayClass.showDoctorAppointments(d1.getName()));
         
-         JOptionPane.showMessageDialog(null, "Appointment Created!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
+        
     }//GEN-LAST:event_cmbDoctorChoiceActionPerformed
 
     /**

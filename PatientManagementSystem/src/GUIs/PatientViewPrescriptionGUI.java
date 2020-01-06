@@ -18,8 +18,10 @@ public class PatientViewPrescriptionGUI extends javax.swing.JFrame {
      */
     public PatientViewPrescriptionGUI() {
         initComponents();
+        txtAreaPrescriptions.setText(PrescriptionArrayClass.showPatientMedicines());
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,7 +33,7 @@ public class PatientViewPrescriptionGUI extends javax.swing.JFrame {
 
         btnCancel = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        txtAreaGiveFeedback = new javax.swing.JTextArea();
+        txtAreaPrescriptions = new javax.swing.JTextArea();
         lblGiveDoctorFeedback = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,9 +45,9 @@ public class PatientViewPrescriptionGUI extends javax.swing.JFrame {
             }
         });
 
-        txtAreaGiveFeedback.setColumns(20);
-        txtAreaGiveFeedback.setRows(5);
-        jScrollPane1.setViewportView(txtAreaGiveFeedback);
+        txtAreaPrescriptions.setColumns(20);
+        txtAreaPrescriptions.setRows(5);
+        jScrollPane1.setViewportView(txtAreaPrescriptions);
 
         lblGiveDoctorFeedback.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblGiveDoctorFeedback.setText("View Your Prescriptions");
@@ -138,6 +140,6 @@ public class PatientViewPrescriptionGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnCancel;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblGiveDoctorFeedback;
-    private javax.swing.JTextArea txtAreaGiveFeedback;
+    private javax.swing.JTextArea txtAreaPrescriptions;
     // End of variables declaration//GEN-END:variables
 }

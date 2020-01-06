@@ -24,15 +24,18 @@ import javax.swing.JOptionPane;
  * @author Walker
  */
 public class Login {
-     
+    
+    
+// Assigns random 4 digit number after letter of the P Patient D Doctor A Admin S Secretary, giving them their new ID
  public static String givePatientID(){
-     
+    
+    
      int random4 = (int)(Math.random()*9000)+1000;
      String id = "P" + String.valueOf(random4);
      
      return id;
  }
-
+ // Logs in user as their specific type if pass and ID are correct
     public static boolean LogIn(String ID, String pass){
     
     

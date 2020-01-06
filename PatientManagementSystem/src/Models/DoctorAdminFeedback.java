@@ -9,6 +9,8 @@ package Models;
  *
  * @author Walker
  */
+// typical class for doctor feedback from admin
+
 public class DoctorAdminFeedback {
     private String doctorID;
     

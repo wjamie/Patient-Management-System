@@ -10,7 +10,10 @@ import java.util.ArrayList;
 /**
  *
  * @author Walker
+ * 
  */
+// abstract user class for all users 
+
 public abstract class User {
     protected String ID;
     protected String name;

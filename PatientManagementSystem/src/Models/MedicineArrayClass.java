@@ -5,12 +5,15 @@
  */
 package Models;
 
+import static Models.DoctorArrayClass.doctors;
 import java.util.ArrayList;
 
 /**
  *
  * @author Walker
  */
+  // Class for holding Medicines (an array of medicines) and allows adding and getting medicines
+
 public class MedicineArrayClass {
      
     public static ArrayList<Medicine> medicines = new ArrayList<>();
@@ -27,6 +30,18 @@ public class MedicineArrayClass {
          }
          return medicineNames;
      }
+    
+      public static Medicine getMedicineByName(String value){
+      Medicine medicine = null;
+        for (Medicine d: medicines) {
+             d.getName();
+             if (d.getName().equals(value)) {
+                 medicine = d;
+             }
+         }
+        return medicine;
+     }
+    
     
     public static String[] getMedicinesNamesAsStringArray(){
     ArrayList<String> medicineNames = new ArrayList<>();

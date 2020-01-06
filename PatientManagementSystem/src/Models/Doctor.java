@@ -11,6 +11,8 @@ package Models;
  */
 public class Doctor extends User{ 
     
+      // typical Doctor class with constructor getters and setters for id, name password and address
+    
      public Doctor(String ID, String name, String address, String password) {
         this.ID = ID;
         this.name = name;
@@ -18,8 +20,10 @@ public class Doctor extends User{
         this.password = password;
     }
 
+// current doctor after login
     public static Doctor currentDoctor;
-    
+   
+    // makes a doctor the current user after LOGIN
     public static void makeCurrentDoctor(Doctor doctor){
         currentDoctor = doctor;
     }
