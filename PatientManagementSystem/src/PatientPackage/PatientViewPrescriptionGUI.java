@@ -18,7 +18,7 @@ public class PatientViewPrescriptionGUI extends javax.swing.JFrame {
      */
     public PatientViewPrescriptionGUI() {
         initComponents();
-        txtAreaPrescriptions.setText(PrescriptionArrayClass.showPatientMedicines());
+        txtAreaPrescriptions.setText(PrescriptionArrayClass.showPatientPrescriptions());
     }
 
     

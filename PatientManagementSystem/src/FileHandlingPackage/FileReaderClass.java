@@ -14,6 +14,8 @@ import java.io.FileWriter;
  *
  * @author Walker
  */
+// Class for reading from a File
+
 public class FileReaderClass {
     
     public static void ReadFile() {
@@ -24,7 +26,7 @@ public class FileReaderClass {
             
             String str;
             while((str = br.readLine()) != null){
-            
+            // Fake Users shown on login screen for assessment
             LoginPackage.LoginGUI.txtAreaFile.append(str + "\n");
             }
         } catch (Exception e) {

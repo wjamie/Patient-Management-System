@@ -6,7 +6,7 @@
 package PatientPackage;
 
 import LoginPackage.CurrentUser;
-import static DoctorPackage.DoctorArrayClass.doctors;
+
 import java.util.ArrayList;
 
 /**
@@ -19,12 +19,12 @@ public class PatientArrayClass {
     
     
     public static ArrayList<Patient> patients = new ArrayList<>();
-  
+  // add patient
      public static void addPatient(String ID, String name, String address, String password, int age, String gender){
         Patient newPatient = new Patient(ID, name, address, password, age, gender);
         PatientArrayClass.patients.add(newPatient);
     }
-      
+      // remove patient by combobox name
       public static void removePatientByCMBName(String value){
       
         for (Patient p: patients) {
@@ -34,7 +34,7 @@ public class PatientArrayClass {
              }
          }
      }
-    
+    // get patient by theirt String name
       public static Patient getPatientByName(String value){
       Patient patient = null;
         for (Patient d: patients) {
@@ -45,7 +45,7 @@ public class PatientArrayClass {
          }
         return patient;
      }
-      
+      // get all patient names as arrayLIST
     public static ArrayList<String> getPatientsNames(){
     ArrayList<String> patientNames = new ArrayList<>();
          for (Patient p: patients) {
@@ -53,7 +53,7 @@ public class PatientArrayClass {
          }
          return patientNames;
      }
-    
+    // get patients names as String array
     public static String[] getPatientsNamesAsStringArray(){
     ArrayList<String> patientNames = new ArrayList<>();
  
@@ -66,7 +66,8 @@ public class PatientArrayClass {
          
          return patientNamesAsStringArray;
      }
-    
+   
+    // get patient ID by their NAME
       public static String getPatientIDByName(String value){
       String patientID = "";
         for (Patient d: patients) {

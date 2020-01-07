@@ -6,7 +6,7 @@
 package SecretaryPackage;
 
 import LoginPackage.CurrentUser;
-import static DoctorPackage.DoctorArrayClass.doctors;
+
 import java.util.ArrayList;
 
 /**
@@ -18,17 +18,17 @@ import java.util.ArrayList;
 public class SecretaryArrayClass {
      
     public static ArrayList<Secretary> secretarys = new ArrayList<>();
-  
+  // add new secretary to array
     public static void addSecretary(String ID, String name, String address, String password){
         Secretary newSecretary = new Secretary(ID, name, address, password);
         SecretaryArrayClass.secretarys.add(newSecretary);
     }
-    
+    // remove secretary from array
     public static void removeSecretary(Secretary secretary){
          SecretaryArrayClass.secretarys.remove(secretary);
      }
     
-    
+    // remove secretary by combo box name 
      public static void removeSecretaryByCMBName(String value){
       
         for (Secretary s: secretarys) {
@@ -38,17 +38,9 @@ public class SecretaryArrayClass {
              }
          }
      }
+   
     
-       public static boolean PatientLogIn(String ID, String pass){
-     boolean log = false;
-         for (Secretary d: secretarys){
-             if (d.getID().equals(ID) && d.getPassword().equals(pass)){
-                 log = true;
-             }
-         }
-         return log;
-     }
-    
+    // get secretary names as array
     public static ArrayList<String> getSecretarysNames(){
     ArrayList<String> secretaryNames = new ArrayList<>();
          for (Secretary d: secretarys) {
@@ -56,7 +48,7 @@ public class SecretaryArrayClass {
          }
          return secretaryNames;
      }
-    
+    // get secretary names as string array
     public static String[] getSecretarysNamesAsStringArray(){
     ArrayList<String> secretaryNames = new ArrayList<>();
  
@@ -70,7 +62,7 @@ public class SecretaryArrayClass {
          return secretaryNamesAsStringArray;
      }
     
-    
+     // log in secretary
     public static boolean SecretaryLogIn(String ID, String pass){
      boolean log = false;
          for (Secretary d: secretarys){

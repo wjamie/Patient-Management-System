@@ -19,9 +19,8 @@ public abstract class User {
     protected String name;
     protected String address;
     protected String password;
-   
-   
-    
+
+  
     public String getID() {
         return ID;
     }
@@ -46,5 +45,12 @@ public abstract class User {
         this.address = address;
     }
     
-    
+      public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+   
 }

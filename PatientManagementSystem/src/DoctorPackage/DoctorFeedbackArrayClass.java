@@ -16,12 +16,12 @@ import java.util.ArrayList;
 public class DoctorFeedbackArrayClass {
      
     public static ArrayList<DoctorFeedback> doctorFeedbacks = new ArrayList<>();
-  
+  // add doctor feedback from patient
     public static void addDoctorFeedback(String doctorID, int rating, String feedback){
         DoctorFeedback newDoctorFeedback = new DoctorFeedback(doctorID, rating, feedback);
         DoctorFeedbackArrayClass.doctorFeedbacks.add(newDoctorFeedback);
     }
-    
+    // show docotr feedback (FOR ADMIN VIEW)
     public static String showDoctorFeedback(String doctorName){
     ArrayList<String> doctorFeedback = new ArrayList<>();
     

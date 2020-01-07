@@ -45,46 +45,6 @@ public class Patient extends User{
         currentPatient = patient;
     }
      
-    @Override
-    public String getID() {
-        return ID;
-    }
-
-    @Override
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String getAddress() {
-        return address;
-    }
-
-    @Override
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-     
-     
     public int getAge() {
         return age;
     }

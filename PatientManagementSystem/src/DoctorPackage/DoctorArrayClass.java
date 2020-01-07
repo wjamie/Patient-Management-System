@@ -19,16 +19,17 @@ import java.util.ArrayList;
 public class DoctorArrayClass {
      
     public static ArrayList<Doctor> doctors = new ArrayList<>();
-  
+  // add new doctor
     public static void addDoctor(String ID, String name, String address, String password){
         Doctor newDoctor = new Doctor(ID, name, address, password);
         DoctorArrayClass.doctors.add(newDoctor);
     }
-    
+    // remove doctor
      public static void removeDoctor(Doctor doctor){
          DoctorArrayClass.doctors.remove(doctor);
      }
-      
+     
+     // remove doctor by combobox name
      public static void removeDoctorByCMBName(String value){
       
         for (Doctor d: doctors) {
@@ -38,7 +39,7 @@ public class DoctorArrayClass {
              }
          }
      }
-     
+     // Get doctor object from their string name
      public static Doctor getDoctorByName(String value){
       Doctor doctor = null;
         for (Doctor d: doctors) {
@@ -51,7 +52,7 @@ public class DoctorArrayClass {
      }
      
      
-     
+     // get DOCTOR ID from NAME
      public static String getDoctorIDByName(String value){
       String doctorID = "";
         for (Doctor d: doctors) {
@@ -62,7 +63,7 @@ public class DoctorArrayClass {
          }
         return doctorID;
      }
-     
+     // get all doctor names as array
     public static ArrayList<String> getDoctorsNames(){
     ArrayList<String> doctorNames = new ArrayList<>();
          for (Doctor d: doctors) {
@@ -70,7 +71,7 @@ public class DoctorArrayClass {
          }
          return doctorNames;
      }
-    
+    // log in doctor
      public static boolean DoctorLogIn(String ID, String pass){
      boolean log = false;
          for (Doctor d: doctors){

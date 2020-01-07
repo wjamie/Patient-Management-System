@@ -5,7 +5,7 @@
  */
 package SystemModelsPackage;
 
-import static DoctorPackage.DoctorArrayClass.doctors;
+
 import java.util.ArrayList;
 
 /**
@@ -17,12 +17,12 @@ import java.util.ArrayList;
 public class MedicineArrayClass {
      
     public static ArrayList<Medicine> medicines = new ArrayList<>();
-  
+  //add new medicine
     public static void addMedicine(String name){
         Medicine newMedicine = new Medicine(name);
         MedicineArrayClass.medicines.add(newMedicine);
     }
-      
+      // get medicines as array
     public static ArrayList<String> getMedicinesNames(){
     ArrayList<String> medicineNames = new ArrayList<>();
          for (Medicine m: medicines) {
@@ -30,7 +30,7 @@ public class MedicineArrayClass {
          }
          return medicineNames;
      }
-    
+    // get medicine object by name
       public static Medicine getMedicineByName(String value){
       Medicine medicine = null;
         for (Medicine d: medicines) {

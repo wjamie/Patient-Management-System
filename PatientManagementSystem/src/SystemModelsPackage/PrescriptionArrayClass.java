@@ -19,8 +19,8 @@ public class PrescriptionArrayClass {
      public static ArrayList<Prescription> prescriptions = new ArrayList<>();  
   
          
-     
-     public static String showPatientMedicines(){
+     // show patient their medicine prescriptions
+     public static String showPatientPrescriptions(){
         ArrayList<String> patientPrescriptions = new ArrayList<>();
     
        String patientID = Patient.currentPatient.getID();
@@ -36,7 +36,7 @@ public class PrescriptionArrayClass {
          return feedbackString;
      }
     
-   
+   // add new prescription
     public static void addPrescription(String patientID, Medicine prescribedMedicine, String dosageNotes){
         
         Prescription newPrescription = new Prescription(patientID, prescribedMedicine, dosageNotes);

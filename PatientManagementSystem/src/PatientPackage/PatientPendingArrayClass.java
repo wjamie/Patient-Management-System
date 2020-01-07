@@ -16,12 +16,12 @@ import java.util.ArrayList;
 public class PatientPendingArrayClass {
      
     public static ArrayList<Patient> patientsPending = new ArrayList<>();
-  
+  // add patient to pending list
      public static void addPatient(String ID, String name, String address, String password, int age, String gender){
         Patient newPatient = new Patient(ID, name, address, password, age, gender);
         PatientPendingArrayClass.patientsPending.add(newPatient);
     }
-      
+      // remove pending patient by their combo box name
       public static void removePatientByCMBName(String value){
       
         for (Patient p: patientsPending) {
@@ -31,18 +31,18 @@ public class PatientPendingArrayClass {
              }
          }
      }
-    
+    // get pending patient by name
       public static Patient getPatientByName(String name){
           Patient patient1 = null;
     
          for (Patient p: patientsPending) {
-             if (p.getName() ==name){
+             if (p.getName().equals(name)){
                  patient1 = p;
              }
          }
          return patient1;
      }
-      
+      // get pending patients names as arraylist
     public static ArrayList<String> getPatientsNames(){
     ArrayList<String> patientNames = new ArrayList<>();
          for (Patient p: patientsPending) {
@@ -50,7 +50,7 @@ public class PatientPendingArrayClass {
          }
          return patientNames;
      }
-    
+   // get patient pending  as string array
     public static String[] getPatientsNamesAsStringArray(){
     ArrayList<String> patientNames = new ArrayList<>();
  

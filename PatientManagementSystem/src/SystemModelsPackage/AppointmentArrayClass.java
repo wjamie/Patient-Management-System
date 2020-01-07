@@ -17,12 +17,12 @@ import java.util.ArrayList;
 public class AppointmentArrayClass {
      
     public static ArrayList<Appointment> appointments = new ArrayList<>();
-  
+  // add new appointment
     public static void addAppointment(String doctorID, String patientID, String dates){
         Appointment newAppointment = new Appointment(doctorID, patientID, dates);
         AppointmentArrayClass.appointments.add(newAppointment);
     }
-    
+    // show doctor their appointments
     public static String showDoctorAppointments(String doctorName){
     ArrayList<String> appoints = new ArrayList<>();
     
@@ -38,7 +38,7 @@ public class AppointmentArrayClass {
          String feedbackString = "Here is " + doctorName + " 's appointments:  " + appoints;
          return feedbackString;
      }
-    
+    // show patient their appointments
      public static String showPatientAppointments(String patientName){
     ArrayList<String> appoints = new ArrayList<>();
     

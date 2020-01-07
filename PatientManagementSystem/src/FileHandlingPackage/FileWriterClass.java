@@ -15,6 +15,7 @@ import java.io.PrintWriter;
  *
  * @author Walker
  */
+// Class for Writing to a File
 public class FileWriterClass {
     
     public static void WriteFile(String input) {

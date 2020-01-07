@@ -16,12 +16,12 @@ import java.util.ArrayList;
 public class AdminArrayClass {
      
     public static ArrayList<Admin> admins = new ArrayList<>();
-  
+  // add a new admin
     public static void addAdmin(String ID, String name, String address, String password){
         Admin newAdmin = new Admin(ID, name, address, password);
         AdminArrayClass.admins.add(newAdmin);
     }
-      
+      // get admins names ARRAY
     public static ArrayList<String> getAdminsNames(){
     ArrayList<String> adminNames = new ArrayList<>();
          for (Admin d: admins) {
@@ -29,7 +29,7 @@ public class AdminArrayClass {
          }
          return adminNames;
      }
-    
+    // get Admin names array as a STRING
     public static String[] getAdminsNamesAsStringArray(){
     ArrayList<String> adminNames = new ArrayList<>();
  
@@ -42,7 +42,7 @@ public class AdminArrayClass {
          
          return adminNamesAsStringArray;
      }
-    
+    // Logs in ADMIN
       public static boolean AdminLogIn(String ID, String pass){
      boolean log = false;
          for (Admin d: admins){

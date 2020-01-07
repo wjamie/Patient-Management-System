@@ -17,30 +17,16 @@ import java.util.ArrayList;
 public class AppointmentRequestArrayClass {
      
     public static ArrayList<Appointment> appointmentRequests = new ArrayList<>();
-  
+ 
+    // add appointment request
+    
     public static void addAppointment(String doctorID, String patientID, String dates){
         Appointment newAppointment = new Appointment(doctorID, patientID, dates);
         AppointmentRequestArrayClass.appointmentRequests.add(newAppointment);
     }
  
-    
-    public static String showPatientAppointmentsRequests(String patientName){
-    ArrayList<String> appoints = new ArrayList<>();
-    
-    String patientID = PatientArrayClass.getPatientIDByName(patientName);
-         for (Appointment p: appointmentRequests) {
-             
-             if(patientID.equals(p.getPatientID())){
-                 
-                 appoints.add(p.getPossibleDates());
-             }
-             
-         }
-         String feedbackString = "Here is " + patientName + " 's appointments:  " + appoints;
-         return feedbackString;
-     }
-  
-    public static String showAllPatientAppointmentsRequests(){
+    // show appointment requests (FOR SECRETARY VIEW)
+   public static String showAllPatientAppointmentsRequests(){
     ArrayList<String> appoints = new ArrayList<>();
     
    

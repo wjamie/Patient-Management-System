@@ -9,6 +9,7 @@ package SystemModelsPackage;
  *
  * @author Walker
  */
+
 // typical appointment class with doctor, patient and dates as a String
 
 public class Appointment {

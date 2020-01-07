@@ -35,10 +35,10 @@ public class Login {
 // Assigns random 4 digit number after letter of the P Patient D Doctor A Admin S Secretary, giving them their new ID
  public static String givePatientID(){
     
-    
+     // random 4 digit number 
      int random4 = (int)(Math.random()*9000)+1000;
      String id = "P" + String.valueOf(random4);
-     
+     // P for Patient
      return id;
  }
  // Logs in user as their specific type if pass and ID are correct
@@ -77,7 +77,7 @@ public class Login {
         loginGUIInstance.setVisible(false);
         loginGUIInstance.dispose();
        return true;
-        }
+        }       // message box shows if password wrong
         else{JOptionPane.showMessageDialog(null, "Invalid Password!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
            return false;
         }
