@@ -1,0 +1,19 @@
+              ID   : name         : password
+Patients:   
+             P0001 : John Burrows : password
+             P0002 : Bob Sett :     applefanta2
+             P0003 : Mary Herman :  goryprince6
+
+Doctors:
+             D0001 : Dr Langford : password
+             D0002 : Dr Beans : adlefanta2
+             D0003 : Dr Payne : gorydrince6
+             D0004 : Dr Walker : passie123
+
+Secretaries: 
+             S0001 : Riley Mel : password
+             S0002 : Shirley Reid : adlenta2
+             S0003 : Sheila Thompson : goryince6
+
+Admin: 
+             A0001 : Aaron Adminson : password
