@@ -5,8 +5,7 @@
  */
 package SystemModelsPackage;
 
-import PatientPackage.PatientArrayClass;
-import SystemModelsPackage.Appointment;
+
 import java.util.ArrayList;
 
 /**

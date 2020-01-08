@@ -8,6 +8,7 @@ package DoctorPackage;
 import LoginPackage.CurrentUser;
 import SecretaryPackage.Secretary;
 import SecretaryPackage.SecretaryArrayClass;
+import UserPackage.UserArrayClass;
 import java.util.ArrayList;
 
 /**

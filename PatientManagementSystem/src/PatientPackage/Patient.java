@@ -6,8 +6,7 @@
 package PatientPackage;
 
 import UserPackage.User;
-import static DoctorPackage.DoctorFeedbackArrayClass.doctorFeedbacks;
-import static SystemModelsPackage.MedicineArrayClass.medicines;
+
 
 import java.util.ArrayList;
 
