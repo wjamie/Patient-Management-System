@@ -41,7 +41,6 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
         cmbMedicineChoice = new javax.swing.JComboBox<>();
         btnPrescribe = new javax.swing.JButton();
         cmbPatientChoice = new javax.swing.JComboBox<>();
-        btnDone = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,13 +82,6 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
             }
         });
 
-        btnDone.setText("Done");
-        btnDone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDoneActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,9 +89,7 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(btnCancel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDone, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,9 +122,7 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPrescribe))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancel)
-                    .addComponent(btnDone))
+                .addComponent(btnCancel)
                 .addGap(21, 21, 21))
         );
 
@@ -154,10 +142,6 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(null, "Medicine Given!", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnPrescribeActionPerformed
-
-    private void btnDoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnDoneActionPerformed
 
     private void cmbMedicineChoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbMedicineChoiceActionPerformed
         // TODO add your handling code here:
@@ -206,7 +190,6 @@ public class SecretaryGiveMedicinesGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnDone;
     private javax.swing.JButton btnPrescribe;
     private javax.swing.JComboBox<String> cmbMedicineChoice;
     private javax.swing.JComboBox<String> cmbPatientChoice;

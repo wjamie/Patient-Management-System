@@ -67,7 +67,7 @@ public class PatientRequestAppointmentGUI extends javax.swing.JFrame {
             }
         });
 
-        lblDateHelper.setText("Please type the date you would like (e.g. Jan 1)");
+        lblDateHelper.setText("Please type the date you would like (e.g. 14:00 Jan 1st)");
 
         lblDoctorChoice.setText("Select Doctor");
 

@@ -6,6 +6,8 @@
 package PatientPackage;
 import LoginPackage.LoginGUI;
 import LoginPackage.CurrentUser;
+import SecretaryPackage.SecretaryRemovePatientGUI;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Walker
@@ -162,7 +164,8 @@ public class PatientGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestAccountTerminationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestAccountTerminationActionPerformed
-       
+        Patient.currentPatient.wantsRemoval = true;
+        JOptionPane.showMessageDialog(null, "Your removal has been requested.", "Alert", JOptionPane.INFORMATION_MESSAGE); 
     }//GEN-LAST:event_btnRequestAccountTerminationActionPerformed
 
     private void btnViewHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHistoryActionPerformed

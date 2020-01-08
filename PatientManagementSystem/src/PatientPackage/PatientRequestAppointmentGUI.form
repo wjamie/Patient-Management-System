@@ -117,7 +117,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblDateHelper">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Please type the date you would like (e.g. Jan 1)"/>
+        <Property name="text" type="java.lang.String" value="Please type the date you would like (e.g. 14:00 Jan 1st)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblDoctorChoice">

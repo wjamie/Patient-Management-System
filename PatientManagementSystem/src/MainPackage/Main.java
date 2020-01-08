@@ -39,7 +39,7 @@ public class Main {
         
        
       
-        //Adding data 
+        //Adding data for assessment
         PatientArrayClass.addPatient("P0001", "John Burrows", "31 Castle Road, Eggton", "password", 23, "Male");
         PatientArrayClass.addPatient("P0002", "Bob Sett", "8 Reaper Hill, Eggton", "applefanta2", 19, "Male");
         PatientArrayClass.addPatient("P0003", "Mary Herman", "23 Toran Road, Eggton", "goryprince6", 38, "Female");
@@ -59,9 +59,10 @@ public class Main {
         DoctorArrayClass.addDoctor("D0003", "Dr Payne", "236 Toran Road, Eggton", "gorydrince6");
         DoctorArrayClass.addDoctor("D0004", "Dr Walker", "2 Well Road, Plymstock", "passie123");
         
-        AppointmentArrayClass.addAppointment("D0001", "P0001", "21st February");
-        AppointmentArrayClass.addAppointment("D0002", "P0002", "21st January");
-        AppointmentArrayClass.addAppointment("D0003", "P0003", "9th January");
+        AppointmentArrayClass.addAppointment("D0001", "P0001", "14:30 21st February");
+        AppointmentArrayClass.addAppointment("D0002", "P0002", "15:00 21st January");
+        AppointmentArrayClass.addAppointment("D0003", "P0003", "11:00 9th January");
+        AppointmentArrayClass.addAppointment("D0004", "P0003", "9:00 6th November");
         
         AppointmentRequestArrayClass.addAppointment("D0002", "P0001", "9th March");
         
@@ -97,7 +98,7 @@ public class Main {
         
         
         
-        CurrentUser.makeUser(DoctorArrayClass.doctors.get(3));
+        
     }
     
     

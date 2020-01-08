@@ -31,8 +31,6 @@ public class DoctorAdminFeedback {
         this.doctorID = doctorID;
     }
 
-    
-
     public String getFeedback() {
         return feedback;
     }

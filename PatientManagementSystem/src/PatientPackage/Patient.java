@@ -5,6 +5,7 @@
  */
 package PatientPackage;
 
+import static PatientPackage.PatientArrayClass.patients;
 import UserPackage.User;
 
 
@@ -43,7 +44,8 @@ public class Patient extends User{
     public static void makeCurrentPatient(Patient patient){
         currentPatient = patient;
     }
-     
+    
+  
     public int getAge() {
         return age;
     }
@@ -74,5 +76,15 @@ public class Patient extends User{
          return sb.toString();
      }
     
+     public boolean wantsRemoval = false;
    
+     public static String showRemoval(){
+         String str = "";
+         for (Patient p : patients){
+         if (p.wantsRemoval == true) {
+            str = p.getName() + " "+ p.getID();
+         }
+     }
+     return str;
+     }
 }

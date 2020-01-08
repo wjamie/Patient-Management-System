@@ -20,7 +20,7 @@ public abstract class User {
     protected String address;
     protected String password;
 
-  
+   
     public String getID() {
         return ID;
     }
